@@ -132,7 +132,6 @@ If we go into our `show` action and add a `respond_to` block, we can specify wha
       format.html { render :show }
       format.json { render json: @post.to_json(only: [:title, :description, :id],
                               include: [author: { only: [:name]}]) }
-    end
   end
 ```
 
